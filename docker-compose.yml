@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    # The specific image in use here is irrelevant. This example re-uses the
+    # "compose" image to minimize download requirements.
+    image: docker/compose:1.8.0
+    volumes:
+      - ./db:/db
+    entrypoint: ['ls', '/db', '/home']
